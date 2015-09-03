@@ -1,0 +1,18 @@
+<div class="jumbotron text-center">
+        <h1>Add books</h1>
+
+        <form ng-submit="addBookForm.$valid && addNewBook(bookData)" name="addBookForm" novalidate>
+        	<legend>Add new book</legend>
+        	<div ng-bind="success"></div>
+        	<label for="book-name">Name</label>
+        	<input required type="text" name="book-name" placeholder="book-name" ng-model="bookData.name" id="book-name" class="form-control">
+
+        	<label for="book-author">Author</label>
+        	<input required type="text" name="book-author" placeholder="book-author" ng-model="bookData.author" id="book-author" class="form-control">
+
+        	<label for="book-price">Price</label>
+        	<input required type="text" name="book-price" placeholder="book-price" ng-model="bookData.price" id="book-price" class="form-control">
+
+        	<button class="btn btn-primary btn-large">Add</button>
+        </form>
+</div>
