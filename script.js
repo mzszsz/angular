@@ -43,26 +43,18 @@
 		
     });
     scotchApp.controller('contactController',function($scope,$http) {
-    	$scope.message="Please Contact Us.";
+    	$scope.message="All Products";
         
     	$http.post("pages/data.php",{}).success(function(data,status,headers,config){
     		$scope.books=data;
     	});
 
-    	$scope.viewBook=function(id){
-    		$http.post("pages/data.php",{view:'view',id:id}).success(function(data,status,headers,config){
-	    		console.log(data+$routeParams);
-	    		$scope.books=data;
-    		});
-    	}
-    	//$scope.products=
     });
 
     scotchApp.controller('viewController',function($scope,$http,$routeParams) {
+        $scope.message = 'Single product Page';
     	id=$routeParams.id;
-    	//$scope.products=
     	$http.post("pages/data.php",{view:'view',id:id}).success(function(data,status,headers,config){
-	    		console.log(data+$routeParams);
 	    		$scope.books=data;
     		});
     });
