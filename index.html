@@ -1,20 +1,23 @@
 <!-- index.html -->
     <!DOCTYPE html>
-    <html ng-app="scotchApp">
+    <html ng-app="scotchApp" ng-controller="mainController">
     <head>
       <!-- SCROLLS -->
       <!-- load bootstrap and fontawesome via CDN -->
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
       <link rel="stylesheet" href="style.css" />
+      <link rel="icon" type="image/png" href="https://www.google.co.in/images/branding/googleg/2x/googleg_standard_color_128dp.png">
       <!-- SPELLS -->
       <base href="/angular/"></base>
       <!-- load angular and angular route via CDN -->
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
       <script src="script.js"></script>
+      <title ng-bind-template="{{title}}"></title>
     </head>
-    <body ng-controller="mainController">
+    <body >
 
         <!-- HEADER AND NAVBAR -->
         <header>
@@ -26,6 +29,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about2"><i class="fa fa-home"></i> About Us</a></li>
                     <li><a href="#about"><i class="fa fa-shield"></i> Add Product</a></li>
                     <li><a href="#contact"><i class="fa fa-comment"></i> View Listing</a></li>
                 </ul>
